@@ -5,12 +5,163 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CREATE PAGE </title>
+
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/form.css" />
+
 </head>
 <body>
-  <h1> CREATE PAGE </h1>
-
+  <header>
+    <%- include('partials/_header'); %>
+  </header>
+  <h1> Create a Quiz </h1>
+  <p> Create your own quiz right here! It's simple: fill in the question and 4 possible answers. Select the radio button next to the correct answer. Then hit "Create my quiz!" and your quiz will be ready!</p>
+  <section>
   <form action="/my-quizzes" method="POST">
-    <button type="submit">Submit</button>
+    <div class="question">
+
+      <div class = "individual-question">
+    <label for="q1">Question 1:</label>
+    <input type="text" id="q1" name="q1" class><br>
+        </div>
+
+        <div class = "individual-question">
+    <label for="q1a1">Answer option 1:</label>
+    <input type="text" id="q1a1" name="q1a1"><input type="radio" id="q1a1" name="q1-radio" required="required"><br>
+  </div>
+
+    <div class = "individual-question">
+    <label for="q1a2">Answer option 2:</label>
+    <input type="text" id="q1a2" name="q1a2"><input type="radio" id="q1a2" name="q1-radio" required="required"><br>
+  </div>
+
+    <div class = "individual-question">
+    <label for="q1a3">Answer option 3:</label>
+    <input type="text" id="q1a3" name="q1a3"><input type="radio" id="q1a3" name="q1-radio" required="required"><br>
+  </div>
+
+    <div class = "individual-question">
+    <label for="q1a4">Answer option 4:</label>
+    <input type="text" id="q1a4" name="q1a4"><input type="radio" id="q1a4" name="q1-radio" required="required"><br>
+  </div>
+
+    <br>
+  </div>
+
+    <div class="question">
+      <div class = "individual-question">
+    <label for="q2">Question 2:</label>
+    <input type="text" id="q2" name="q2"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q2a1">Answer option 1:</label>
+    <input type="text" id="q2a1" name="q2a1"><input type="radio" id="q2a1" name="q2-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q2a2">Answer option 2:</label>
+    <input type="text" id="q2a2" name="q2a2"><input type="radio" id="q2a2" name="q2-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q2a3">Answer option 3:</label>
+    <input type="text" id="q2a3" name="q2a3"><input type="radio" id="q2a3" name="q2-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q2a4">Answer option 4:</label>
+    <input type="text" id="q2a4" name="q2a4"><input type="radio" id="q2a4" name="q2-radio" required="required"><br>
+    </div>
+    <br>
+  </div>
+
+    <div class="question">
+      <div class = "individual-question">
+    <label for="q3">Question 3:</label>
+    <input type="text" id="q3" name="q3"><br>
+      </div>
+
+    <div class = "individual-question">
+    <label for="q3a1">Answer option 1:</label>
+    <input type="text" id="q3a1" name="q3a1"><input type="radio" id="q3a1" name="q3-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q3a2">Answer option 2:</label>
+    <input type="text" id="q3a2" name="q3a2"><input type="radio" id="q3a2" name="q3-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q3a3">Answer option 3:</label>
+    <input type="text" id="q3a3" name="q3a3"><input type="radio" id="q3a3" name="q3-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q3a4">Answer option 4:</label>
+    <input type="text" id="q3a4" name="q3a4"><input type="radio" id="q3a4" name="q3-radio" required="required"><br>
+    </div>
+    <br>
+    </div>
+
+    <div class="question">
+      <div class = "individual-question">
+    <label for="q4">Question 4:</label>
+    <input type="text" id="q3" name="q3"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q4a1">Answer option 1:</label>
+    <input type="text" id="q4a1" name="q4a1"><input type="radio" id="q4a1" name="q4-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q4a2">Answer option 2:</label>
+    <input type="text" id="q4a2" name="q4a2"><input type="radio" id="q4a2" name="q4-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q4a3">Answer option 3:</label>
+    <input type="text" id="q4a3" name="q4a3"><input type="radio" id="q4a3" name="q4-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q4a4">Answer option 4:</label>
+    <input type="text" id="q4a4" name="q4a4"><input type="radio" id="q4a4" name="q4-radio" required="required"><br>
+    </div>
+    <br>
+    </div>
+
+    <div class="question">
+      <div class = "individual-question">
+    <label for="q5">Question 5:</label>
+    <input type="text" id="q5" name="q5"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q5a1">Answer option 1:</label>
+    <input type="text" id="q5a1" name="q5a1"><input type="radio" id="q5a1" name="q4-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q5a2">Answer option 2:</label>
+    <input type="text" id="q5a2" name="q5a2"><input type="radio" id="q5a2" name="q4-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q5a3">Answer option 3:</label>
+    <input type="text" id="q5a3" name="q5a3"><input type="radio" id="q5a3" name="q4-radio" required="required"><br>
+    </div>
+
+    <div class = "individual-question">
+    <label for="q5a4">Answer option 4:</label>
+    <input type="text" id="q5a4" name="q5a4"><input type="radio" id="q5a4" name="q4-radio" required="required"><br>
+    </div>
+    <br>
+    </div>
+
+    <button type="submit">Create my quiz!</button>
   </form>
+</section>
 </body>
 </html>

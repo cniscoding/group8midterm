@@ -1,6 +1,11 @@
 // See: https://sass-lang.com/
 
-body,
+body{
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
 html {
   margin: 0;
 }
