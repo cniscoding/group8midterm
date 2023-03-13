@@ -20,9 +20,9 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/:id', (req, res) => {
-const id = req.params.id;
-const quiz = getQuizById(id, quizzesDatabase);
-let numOfCorrects = 0;
+  const id = req.params.id;
+  const quiz = getQuizById(id, quizzesDatabase);
+  let numOfCorrects = 0;
 // const numOfQuestions = ...
 
 // for each question
