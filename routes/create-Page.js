@@ -68,7 +68,21 @@ const addQuiz = function(quizzes) {
     });
 };
 
-
+const getLastQuizId = function () {
+  const queryString = `
+  SELECT id
+  FROM quizzes
+  ORDER BY id DESC
+  limit 1
+  `
+  return pool
+  .query(queryString)
+  // console.log('result.rows', result.rows)
+  .then(result => result)
+  .catch(err => {
+    console.log(err.message);
+  });
+}
 
 //  working for questions
 // const addQuestion = function (questions) {
@@ -111,7 +125,9 @@ const addQuiz = function(quizzes) {
 
 router.post('/', (req, res) => {
   addQuiz({user_id: 1, title: req.body.quiztitle, public: req.body.publicprivate})
+
   .then(quiz => {
+    console.log(getLastQuizId());
   addQuestion({question: req.body.q1, answer_1: req.body.q1a1, answer_2: req.body.q1a2, answer_3: req.body.q1a3, answer_4: req.body.q1a4, is_correct: req.body.q1radio})
     .then(question => {
       addQuestion({question: req.body.q2, answer_1: req.body.q2a1, answer_2: req.body.q2a2, answer_3: req.body.q2a3, answer_4: req.body.q2a4, is_correct: req.body.q2radio})
