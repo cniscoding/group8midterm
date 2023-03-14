@@ -6,6 +6,6 @@ CREATE TABLE quizzes (
   question_id INTEGER REFERENCES questions(id) ON DELETE CASCADE,
   answer_id INTEGER REFERENCES answers(id) ON DELETE CASCADE,
   title VARCHAR(255) NOT NULL,
-  public BOOLEAN NOT NULL DEFAULT TRUE,
+  public TEXT NOT NULL,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
 );

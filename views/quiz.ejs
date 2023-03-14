@@ -10,10 +10,38 @@
   <header>
     <%- include('partials/_header'); %>
   </header>
-  <h1> QUIZ PAGE</h1>
+  <h1> QUIZ PAGE - This will need to be replaced with the quiz title!</h1>
+  <section>
   <form action="/quiz" method="POST">
+    <div class="question">
+    <div class = "individual-question">
+      <label for="q1">Question 1:</label>
+      <input type="text" id="q1" name="q1" class><br>
+          </div>
+
+          <div class = "individual-question">
+      <input type="radio" id="quizq1a1" name="a1radio" required="required" value="1">Answer 1 goes here<br>
+    </div>
+
+      <div class = "individual-question">
+      <input type="radio" id="quizq1a2" name="a1radio" required="required" value="2">Answer 2 goes here<br>
+    </div>
+
+      <div class = "individual-question">
+      <input type="radio" id="quizq1a3" name="a1radio" required="required" value="3">Answer 3 goes here<br>
+    </div>
+
+      <div class = "individual-question">
+      <input type="radio" id="quizq1a4" name="a1radio" required="required" value='4'>Answer 4 goes here<br>
+    </div>
+
+      <br>
+    </div>
     <button type="submit">Submit</button>
   </form>
+  </section>
+
+
 
 </body>
 </html>

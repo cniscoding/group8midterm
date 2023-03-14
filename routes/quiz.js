@@ -9,14 +9,14 @@ const express = require('express');
 const router  = express.Router();
 const { generateRandomID } = require('../server');
 
-router.get('/:id', (req, res) => {
+router.get('/', (req, res) => {
 //  const id = req.params.id;
 
   // if quizzes database contains a quiz with the given id, procceed
   // const quiz = getQuizById(id, quizzesDatabase);
   // if the quiz id is not found, return alert message
 
-//  res.render('quiz', quiz);
+  res.render('quiz');
 });
 
 router.post('/:id', (req, res) => {
