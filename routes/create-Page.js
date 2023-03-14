@@ -21,8 +21,8 @@ router.get('/', (req, res) => {
   res.render('createPage');
 });
 
-const addQuestion = function (questions) {
-  console.log("inside add question")
+const addQuestion = function(questions) {
+  console.log("inside add question");
   const queryParams = [
     questions.question,
     questions.answer_1,
@@ -86,25 +86,28 @@ const addQuestion = function (questions) {
 // };
 
 router.post('/', (req, res) => {
-    addQuestion({question: req.body.q1, answer_1: req.body.q1a1, answer_2: req.body.q1a2, answer_3: req.body.q1a3, answer_4: req.body.q1a4, is_correct: req.body.q1radio})
-      .then(question => {
-        addQuestion({question: req.body.q2, answer_1: req.body.q2a1, answer_2: req.body.q2a2, answer_3: req.body.q2a3, answer_4: req.body.q2a4, is_correct: req.body.q2radio})
-          .then(question => {
-            addQuestion({question: req.body.q3, answer_1: req.body.q3a1, answer_2: req.body.q3a2, answer_3: req.body.q3a3, answer_4: req.body.q3a4, is_correct: req.body.q3radio})
+  addQuestion({question: req.body.q1, answer_1: req.body.q1a1, answer_2: req.body.q1a2, answer_3: req.body.q1a3, answer_4: req.body.q1a4, is_correct: req.body.q1radio})
+    .then(question => {
+      addQuestion({question: req.body.q2, answer_1: req.body.q2a1, answer_2: req.body.q2a2, answer_3: req.body.q2a3, answer_4: req.body.q2a4, is_correct: req.body.q2radio})
+        .then(question => {
+          addQuestion({question: req.body.q3, answer_1: req.body.q3a1, answer_2: req.body.q3a2, answer_3: req.body.q3a3, answer_4: req.body.q3a4, is_correct: req.body.q3radio})
             .then(question => {
               addQuestion({question: req.body.q4, answer_1: req.body.q4a1, answer_2: req.body.q4a2, answer_3: req.body.q4a3, answer_4: req.body.q4a4, is_correct: req.body.q4radio})
-              .then(question => {
-                addQuestion({question: req.body.q5, answer_1: req.body.q5a1, answer_2: req.body.q5a2, answer_3: req.body.q5a3, answer_4: req.body.q5a4, is_correct: req.body.q5radio})
                 .then(question => {
-        res.redirect('/');
-      })})})})
+                  addQuestion({question: req.body.q5, answer_1: req.body.q5a1, answer_2: req.body.q5a2, answer_3: req.body.q5a3, answer_4: req.body.q5a4, is_correct: req.body.q5radio})
+                    .then(question => {
+                      res.redirect('/');
+                    });
+                });
+            });
+        });
     })
-      .catch(e => {
-        console.error(e);
-        res.send(e)
-      });
+    .catch(e => {
+      console.error(e);
+      res.send(e);
+    });
 
-  });
+});
 
 
 // router.post('/', (req, res) => {
@@ -122,41 +125,41 @@ router.post('/', (req, res) => {
 //     });
 // });
 
-  // working code for questions
-  // router.post('/', (req, res) => {
-  //   const userId = 1;
-  //   addQuestion({question: req.body.q1, id: userId})
-  //     .then(question => {
+// working code for questions
+// router.post('/', (req, res) => {
+//   const userId = 1;
+//   addQuestion({question: req.body.q1, id: userId})
+//     .then(question => {
 
-  //       //
-  //       // req.body for the answers
-  //       res.send(question);
-  //     })
-  //     .catch(e => {
-  //       console.error(e);
-  //       res.send(e)
-  //     });
-  // });
+//       //
+//       // req.body for the answers
+//       res.send(question);
+//     })
+//     .catch(e => {
+//       console.error(e);
+//       res.send(e)
+//     });
+// });
 
-  // add the new quiz to the quizzes database
-    // generate a quiz id
-    // get the input quiz title (req.body.quizTitle)
-    // get the userID (req.session.user_id)
-    // get the public/private setting
+// add the new quiz to the quizzes database
+// generate a quiz id
+// get the input quiz title (req.body.quizTitle)
+// get the userID (req.session.user_id)
+// get the public/private setting
 
-  // add the new question to the questions database
-    // generate a question id
-    // get the input question (req.body.q1)
-    // get the quiz id generated above
+// add the new question to the questions database
+// generate a question id
+// get the input question (req.body.q1)
+// get the quiz id generated above
 
-  // add the new answer option to the options database
-    // generate an option id
-    // get the input answer option (req.body.q1a1)
-    // get the question id generated above
-    // get the correct/incorrect value
-  // repeat for all options
+// add the new answer option to the options database
+// generate an option id
+// get the input answer option (req.body.q1a1)
+// get the question id generated above
+// get the correct/incorrect value
+// repeat for all options
 
-  // repeat for all questions
+// repeat for all questions
 
 //  const myQuizzes = getMyQuizzes(user_id, quizzesDatabase);
 //  res.render('myQuizzes', myQuizzes);

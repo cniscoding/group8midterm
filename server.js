@@ -33,9 +33,9 @@ const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
 const quiz = require('./routes/quiz');
-const createPage = require('./routes/create-Page')
-const results = require('./routes/results')
-const myQuizzes = require('./routes/my-Quizzes')
+const createPage = require('./routes/create-Page');
+const results = require('./routes/results');
+const myQuizzes = require('./routes/my-Quizzes');
 
 
 
@@ -65,7 +65,7 @@ app.use('/my-Quizzes', myQuizzes);
 
 app.get('/', (req, res) => {
   // get all public quizzes from the quizzes database
-   res.render('index');
+  res.render('index');
 });
 
 app.listen(PORT, () => {
@@ -74,7 +74,7 @@ app.listen(PORT, () => {
 
 function generateRandomID() {
   return Math.random().toString(36).slice(2, 8);
-};
+}
 
 module.exports = {
   generateRandomID,
