@@ -12,31 +12,116 @@
   <header>
     <%- include('partials/_header'); %>
   </header>
-  <h1> QUIZ PAGE - This will need to be replaced with the quiz title!</h1>
+  <h1> <%=quiz.title%></h1>
   <section>
-  <form action="/quiz" method="POST">
+  <form action="/quiz/<%=quiz.id%>" method="POST">
     <div class="question">
     <div class = "individual-question">
-      Question 1 text goes here:<br>
+      <p>1. </p><%=question_1.question%><br>
           </div>
 
+
           <div class = "individual-question">
-      <input type="radio" id="quizq1a1" name="a1radio" required="required" value="1">Answer 1 goes here<br>
+      <input type="radio" id="quizq1a1" name="a1radio" required="required" value="1"><%=question_1.answer_1%><br>
     </div>
 
       <div class = "individual-question">
-      <input type="radio" id="quizq1a2" name="a1radio" required="required" value="2">Answer 2 goes here<br>
+      <input type="radio" id="quizq1a2" name="a1radio" required="required" value="2"><%=question_1.answer_2%><br>
     </div>
 
       <div class = "individual-question">
-      <input type="radio" id="quizq1a3" name="a1radio" required="required" value="3">Answer 3 goes here<br>
+      <input type="radio" id="quizq1a3" name="a1radio" required="required" value="3"><%=question_1.answer_3%><br>
     </div>
 
       <div class = "individual-question">
-      <input type="radio" id="quizq1a4" name="a1radio" required="required" value='4'>Answer 4 goes here<br>
+      <input type="radio" id="quizq1a4" name="a1radio" required="required" value='4'><%=question_1.answer_4%><br>
     </div>
 
       <br>
+      <div class = "individual-question">
+      <p>2. </p><%=question_2.question%><br>
+    </div>
+      <div class = "individual-question">
+        <input type="radio" id="quizq2a1" name="a2radio" required="required" value="1"><%=question_2.answer_1%><br>
+      </div>
+
+        <div class = "individual-question">
+        <input type="radio" id="quizq2a2" name="a2radio" required="required" value="2"><%=question_2.answer_2%><br>
+      </div>
+
+        <div class = "individual-question">
+        <input type="radio" id="quizq2a3" name="a2radio" required="required" value="3"><%=question_2.answer_3%><br>
+      </div>
+
+        <div class = "individual-question">
+        <input type="radio" id="quizq2a4" name="a2radio" required="required" value='4'><%=question_2.answer_4%><br>
+      </div>
+<br>
+
+      <div class = "individual-question">
+        <p>3. </p><%=question_3.question%><br>
+      </div>
+        <div class = "individual-question">
+          <input type="radio" id="quizq3a1" name="a3radio" required="required" value="1"><%=question_3.answer_1%><br>
+        </div>
+
+          <div class = "individual-question">
+          <input type="radio" id="quizq3a2" name="a3radio" required="required" value="2"><%=question_3.answer_2%><br>
+        </div>
+
+          <div class = "individual-question">
+          <input type="radio" id="quizq3a3" name="a3radio" required="required" value="3"><%=question_3.answer_3%><br>
+        </div>
+
+          <div class = "individual-question">
+          <input type="radio" id="quizq3a4" name="a3radio" required="required" value='4'><%=question_3.answer_4%><br>
+        </div>
+
+        <br>
+
+        <div class = "individual-question">
+          <p>4. </p><%=question_4.question%><br>
+        </div>
+          <div class = "individual-question">
+            <input type="radio" id="quizq4a1" name="a4radio" required="required" value="1"><%=question_4.answer_1%><br>
+          </div>
+
+            <div class = "individual-question">
+            <input type="radio" id="quizq4a2" name="a4radio" required="required" value="2"><%=question_4.answer_2%><br>
+          </div>
+
+            <div class = "individual-question">
+            <input type="radio" id="quizq4a3" name="a4radio" required="required" value="3"><%=question_4.answer_3%><br>
+          </div>
+
+            <div class = "individual-question">
+            <input type="radio" id="quizq4a4" name="a4radio" required="required" value='4'><%=question_4.answer_4%><br>
+          </div>
+
+          <br>
+
+          <div class = "individual-question">
+            <p>5. </p><%=question_5.question%><br>
+          </div>
+            <div class = "individual-question">
+              <input type="radio" id="quizq5a1" name="a5radio" required="required" value="1"><%=question_5.answer_1%><br>
+            </div>
+
+              <div class = "individual-question">
+              <input type="radio" id="quizq5a2" name="a5radio" required="required" value="2"><%=question_5.answer_2%><br>
+            </div>
+
+              <div class = "individual-question">
+              <input type="radio" id="quizq5a3" name="a5radio" required="required" value="3"><%=question_5.answer_3%><br>
+            </div>
+
+              <div class = "individual-question">
+              <input type="radio" id="quizq5a4" name="a5radio" required="required" value='4'><%=question_5.answer_4%><br>
+            </div>
+
+
+        <br>
+
     </div>
     <button type="submit">Submit</button>
   </form>
