@@ -5,7 +5,7 @@ require('dotenv').config();
 const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
-const cookieSession = require("cookie-session");
+//const cookieSession = require("cookie-session");
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -51,13 +51,13 @@ app.use('/results', results);
 app.use('/my-Quizzes', myQuizzes);
 
 // Note: mount other resources here, using the same pattern above
-app.use(cookieSession({
-  name: 'session',
-  keys: ['key1'],
+// app.use(cookieSession({
+//   name: 'session',
+//   keys: ['key1'],
 
-  // Cookie Options
-  maxAge: 24 * 60 * 60 * 1000 // 24 hours
-}));
+//   // Cookie Options
+//   maxAge: 24 * 60 * 60 * 1000 // 24 hours
+// }));
 
 // Home page
 // Warning: avoid creating more routes in this file!
@@ -65,7 +65,7 @@ app.use(cookieSession({
 
 app.get('/', (req, res) => {
   // get all public quizzes from the quizzes database
-  // res.render('index', publicQuizzes);
+   res.render('index');
 });
 
 app.listen(PORT, () => {
