@@ -6,43 +6,93 @@
  */
 
 const express = require('express');
-const router  = express.Router();
-const { generateRandomID } = require('../server');
+const router = express.Router();
+const {
+  getQuizById,
+  getQuizQuestions
+} = require('../db/queries/quiz');
 
-router.get('/', (req, res) => {
-//  const id = req.params.id;
+const { Pool } = require('pg');
 
-  // if quizzes database contains a quiz with the given id, procceed
-  // const quiz = getQuizById(id, quizzesDatabase);
-  // if the quiz id is not found, return alert message
+const pool = new Pool({
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
+});
 
-  res.render('quiz');
+router.get('/:id', (req, res) => {
+  const id = req.params.id;
+
+  getQuizById(id)
+    .then((quiz) => {
+      getQuizQuestions(id)
+        .then((questions) => {
+          res.render('quiz', { quiz, question_1: questions[0], question_2: questions[1], question_3: questions[2], question_4: questions[3], question_5: questions[4] });
+        })
+    })
+    .catch((err) => {
+      res.send("Quiz not found!");
+    })
 });
 
 router.post('/:id', (req, res) => {
   const id = req.params.id;
-  const quiz = getQuizById(id, quizzesDatabase);
-  let numOfCorrects = 0;
-  // const numOfQuestions = ...
 
-  // for each question
-  // check the correct/incorrect value of the selected option
-  // if correct
-  // numOfCorrects ++;
+  getQuizById(id)
+    .then((quiz) => {
+      getQuizQuestions(id)
+        .then((questions) => {
+          let numOfCorrects = 0;
+          if (questions[0].is_correct === req.body.a1radio) { numOfCorrects++; }
+          if (questions[1].is_correct === req.body.a2radio) { numOfCorrects++; }
+          if (questions[2].is_correct === req.body.a3radio) { numOfCorrects++; }
+          if (questions[3].is_correct === req.body.a4radio) { numOfCorrects++; }
+          if (questions[4].is_correct === req.body.a5radio) { numOfCorrects++; }
 
-  // add the new result to the results database
-  // generate an result id
-  // get the quiz id (id)
-  // get the userID (req.session.user_id)
-  // get the score (numOfCorrects / numOfQuestions)
-  // timestamp
+          addResult({
+            quiz_id: quiz.id,
+            user_id: 1,
+            title: quiz.title,
 
-//  res.render('results', result);
+            score: numOfCorrects
+          })
+            .then((result) => {
+              console.log('Type of result: ', typeof (result));
+              console.log('result: ', result);
+              res.render('results', result);
+            })
+            .catch((err) => {
+              console.log(err.message);
+            })
+        })
+    })
+    .catch((err) => {
+      console.log(err.message);
+    })
+
 });
 
-function getQuizById(id, quizzesDatabase) {
-  // find the quizz in the quizzesDatabase that matches the given id
-  // return the quiz
-}
+const addResult = function (results) {
+  const queryParams = [
+    results.quiz_id,
+    results.user_id,
+    results.title,
+    results.score,
+  ];
+
+  const queryString = `
+  INSERT INTO results (quiz_id, user_id, title, score)
+  VALUES ($1, $2, $3, $4)
+  RETURNING *;`;
+
+  return pool
+    .query(queryString, queryParams)
+    .then(result => result.rows[0])
+    .catch(err => {
+      console.log(err.message);
+    });
+};
 
 module.exports = router;

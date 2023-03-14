@@ -72,10 +72,3 @@ app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
 
-function generateRandomID() {
-  return Math.random().toString(36).slice(2, 8);
-}
-
-module.exports = {
-  generateRandomID,
-};
