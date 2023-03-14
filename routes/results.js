@@ -12,13 +12,13 @@ router.get('/:id', (req, res) => {
   //  const id = req.params.id;
 
   // if results database contains a result with the given id, procceed
-    // const result = getResultById(id, resultsDatabase);
+  // const result = getResultById(id, resultsDatabase);
   // if the result id is not found, return alert message
 
   // res.render('results', result);
 });
 
-function getResultById (id, resultsDatabase) {
+function getResultById(id, resultsDatabase) {
   // find the result in the resultsDatabase that matches the given id
   // return the result
 }
