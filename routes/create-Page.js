@@ -24,12 +24,17 @@ router.get('/', (req, res) => {
 const addQuestion = function (questions) {
   console.log("inside add question")
   const queryParams = [
-    questions.question
+    questions.question,
+    questions.answer_1,
+    questions.answer_2,
+    questions.answer_3,
+    questions.answer_4,
+    questions.is_correct,
   ];
 
   const queryString = `
-  INSERT INTO questions (question)
-  VALUES ($1, $2, $3, $4, $5)
+  INSERT INTO questions (question, answer_1, answer_2, answer_3, answer_4, is_correct)
+  VALUES ($1, $2, $3, $4, $5, $6)
   RETURNING *;`;
 
   return pool
@@ -40,6 +45,27 @@ const addQuestion = function (questions) {
       console.log(err.message);
     });
 };
+
+//  working for questions
+// const addQuestion = function (questions) {
+//   console.log("inside add question")
+//   const queryParams = [
+//     questions.question
+//   ];
+
+//   const queryString = `
+//   INSERT INTO questions (question)
+//   VALUES ($1, $2, $3, $4, $5)
+//   RETURNING *;`;
+
+//   return pool
+//     .query(queryString, queryParams)
+//     // console.log('result.rows', result.rows)
+//     .then(result => result.rows)
+//     .catch(err => {
+//       console.log(err.message);
+//     });
+// };
 
 // const addAnswer = function (question_id, answer) {
 //   const queryParams = [
@@ -60,19 +86,57 @@ const addQuestion = function (questions) {
 // };
 
 router.post('/', (req, res) => {
-    const userId = 1;
-    addQuestion({question: req.body.q1, id: userId})
+    addQuestion({question: req.body.q1, answer_1: req.body.q1a1, answer_2: req.body.q1a2, answer_3: req.body.q1a3, answer_4: req.body.q1a4, is_correct: req.body.q1radio})
       .then(question => {
-
-        //
-        // req.body for the answers
-        res.send(question);
-      })
+        addQuestion({question: req.body.q2, answer_1: req.body.q2a1, answer_2: req.body.q2a2, answer_3: req.body.q2a3, answer_4: req.body.q2a4, is_correct: req.body.q2radio})
+          .then(question => {
+            addQuestion({question: req.body.q3, answer_1: req.body.q3a1, answer_2: req.body.q3a2, answer_3: req.body.q3a3, answer_4: req.body.q3a4, is_correct: req.body.q3radio})
+            .then(question => {
+              addQuestion({question: req.body.q4, answer_1: req.body.q4a1, answer_2: req.body.q4a2, answer_3: req.body.q4a3, answer_4: req.body.q4a4, is_correct: req.body.q4radio})
+              .then(question => {
+                addQuestion({question: req.body.q5, answer_1: req.body.q5a1, answer_2: req.body.q5a2, answer_3: req.body.q5a3, answer_4: req.body.q5a4, is_correct: req.body.q5radio})
+                .then(question => {
+        res.redirect('/');
+      })})})})
+    })
       .catch(e => {
         console.error(e);
         res.send(e)
       });
+
   });
+
+
+// router.post('/', (req, res) => {
+//   addQuestion({question: req.body.q2, answer_1: req.body.q2a1, answer_2: req.body.q2a2, answer_3: req.body.q2a3, answer_4: req.body.q2a4, is_correct: req.body.q1radio})
+//     .then(question => {
+
+//       console.log('req.body.radioq1a1',req.body.q1radio)
+//       //
+//       // req.body for the answers
+//       res.send(question);
+//     })
+//     .catch(e => {
+//       console.error(e);
+//       res.send(e)
+//     });
+// });
+
+  // working code for questions
+  // router.post('/', (req, res) => {
+  //   const userId = 1;
+  //   addQuestion({question: req.body.q1, id: userId})
+  //     .then(question => {
+
+  //       //
+  //       // req.body for the answers
+  //       res.send(question);
+  //     })
+  //     .catch(e => {
+  //       console.error(e);
+  //       res.send(e)
+  //     });
+  // });
 
   // add the new quiz to the quizzes database
     // generate a quiz id
