@@ -10,7 +10,6 @@ const getQuizById = (id) => {
 const getQuizQuestions = (id) => {
     return db.query('SELECT * FROM questions WHERE quiz_id = $1; ', [id])
       .then(data => {
-        console.log('data.rows: ', data.rows);
         return data.rows;
       });
   };

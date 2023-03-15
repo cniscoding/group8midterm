@@ -6,3 +6,5 @@ INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What movie won best picture at the Oscars this year?', 2, 'Elvis', 'Everything Everywhere All at Once', 'All Quiet on the Western Front', 'The Banshees of Inishirin', 2);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('Who is the star of Ted Lasso?', 2, 'Steve Carell', 'Harrison Ford', 'Will Ferrell', 'Jason Sudeikis', 4);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('How many points are on the maple leaf on the Canadian flag?', 2, '11', '9', '10', '13', 1);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('Who is the star of Ted Lasso?', 2, 'Steve Carell', 'Harrison Ford', 'Will Ferrell', 'Jason Sudeikis', 4);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('How many points are on the maple leaf on the Canadian flag?', 2, '11', '9', '10', '13', 1);

@@ -51,22 +51,17 @@ app.use('/results', results);
 app.use('/my-Quizzes', myQuizzes);
 
 // Note: mount other resources here, using the same pattern above
-// app.use(cookieSession({
-//   name: 'session',
-//   keys: ['key1'],
-
-//   // Cookie Options
-//   maxAge: 24 * 60 * 60 * 1000 // 24 hours
-// }));
+const { getPublicQuizzes } = require('./db/queries/publicQuizzes');
 
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
-
-  // get all public quizzes from the quizzes database
-  res.render('index');
+  getPublicQuizzes()
+  .then((publicQuizzes) => {
+    res.render('index', {publicQuizzes});
+  })
 });
 
 app.listen(PORT, () => {

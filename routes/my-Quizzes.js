@@ -6,24 +6,23 @@
  */
 
 const express = require('express');
-const router  = express.Router();
-const { getMyQuizzes } = require('../db/queries/myQuizzes');
+const router = express.Router();
+const { getMyQuizzes, getMyResult } = require('../db/queries/myQuizzes');
 
 router.get('/', (req, res) => {
   const user_id = 1;
   getMyQuizzes(user_id)
-  .then((myQuizzes) => {
-    console.log('Type of myQuizzes: ', typeof(myQuizzes));
-    console.log('myQuizzes: ', myQuizzes);
-;
-    res.render('myQuizzes', myQuizzes)
-  })
-  .catch((err) => {
-    res.send("My quizzes not found!");
-  });
-  // const myQuizzes = findMyQuizzes(userID, quizzesDatabase);
-  // res.render('myQuizzes', myQuizzes);
+    .then((myQuizzes) => {
+      getMyResult(user_id)
+        .then((myResults) => {
+          console.log('myResults', myResults)
+          res.render('myQuizzes', { myQuizzes, myResults });
+        })
+    })
 
+    .catch((err) => {
+      res.send("My result not found!");
+    });
 });
 
 
