@@ -13,17 +13,11 @@ router.get('/', (req, res) => {
   const user_id = 1;
   getMyQuizzes(user_id)
   .then((myQuizzes) => {
-    console.log('Type of myQuizzes: ', typeof(myQuizzes));
-    console.log('myQuizzes: ', myQuizzes);
-;
     res.render('myQuizzes', myQuizzes)
   })
   .catch((err) => {
     res.send("My quizzes not found!");
   });
-  // const myQuizzes = findMyQuizzes(userID, quizzesDatabase);
-  // res.render('myQuizzes', myQuizzes);
-
 });
 
 
