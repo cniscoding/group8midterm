@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
   const user_id = 1;
   getMyQuizzes(user_id)
   .then((myQuizzes) => {
-    res.render('myQuizzes', myQuizzes)
+    res.render('myQuizzes', {myQuizzes})
   })
   .catch((err) => {
     res.send("My quizzes not found!");

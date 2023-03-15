@@ -11,8 +11,18 @@
     <%- include('partials/_header'); %>
   </header>
   <h1> MY QUIZZES</h1>
-
-
+  <h2><Quizzes</h2>
+  <% for (const quiz of myQuizzes) { %>
+    <tr>
+      <td><a href="/quiz/<%= quiz.id %>"><%= quiz.title %></a></td>
+    </tr>
+   <%} %>
+  <h2>Results</h2>
+  <% for (const quiz of myQuizzes) { %>
+    <tr>
+      <td><a href="/quiz/<%= quiz.id %>"><%= quiz.title %></a></td>
+    </tr>
+   <%} %>
 </body>
 </html>
 
