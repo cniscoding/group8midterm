@@ -15,7 +15,6 @@ router.get('/', (req, res) => {
     .then((myQuizzes) => {
       getMyResult(user_id)
         .then((myResults) => {
-          console.log('myResults', myResults)
           res.render('myQuizzes', { myQuizzes, myResults });
         })
     })
