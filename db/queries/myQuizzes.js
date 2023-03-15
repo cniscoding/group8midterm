@@ -7,6 +7,14 @@ const getMyQuizzes = (user_id) => {
     });
 };
 
+const getMyResult = (user_id) => {
+  return db.query('SELECT * FROM results WHERE user_id = $1;', [user_id])
+    .then(data => {
+      return data.rows;
+    });
+};
+
 module.exports = {
-  getMyQuizzes
+  getMyQuizzes,
+  getMyResult
 };

@@ -18,9 +18,9 @@
     </tr>
    <%} %>
   <h2>Results</h2>
-  <% for (const quiz of myQuizzes) { %>
+  <% for (const result of myResults) { %>
     <tr>
-      <td><a href="/quiz/<%= quiz.id %>"><%= quiz.title %></a></td>
+      <td><a href="/results/<%= result.id %>"><%= result.title %></a></td>
     </tr>
    <%} %>
 </body>
