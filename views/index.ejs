@@ -22,6 +22,7 @@
   href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
   integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
   crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/nav.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
@@ -35,14 +36,14 @@
   </header>
 <div class="starter-template">
   <h1>INDEX PAGE</h1>
-  <table>
-    <% for (const quiz of publicQuizzes) { %>
-      <tr>
-        <td><a href="/quiz/<%= quiz.id %>"><%= quiz.title %></a</td>
-      </tr>
-     <%} %>
 
-  </table>
+  <div class="list-group">
+    <% for (const quiz of publicQuizzes) { %>
+      <a href="/quiz/<%= quiz.id %>" class="list-group-item ">
+        <%= quiz.title %>
+      </a>
+      <%} %>
+  </div>
 </div><!-- /.container -->
 </body>
 
