@@ -55,13 +55,10 @@ router.post('/:id', (req, res) => {
             quiz_id: quiz.id,
             user_id: 1,
             title: quiz.title,
-
             score: numOfCorrects
           })
             .then((result) => {
-              console.log('Type of result: ', typeof (result));
-              console.log('result: ', result);
-              res.render('results', result);
+              res.redirect(`/results/${result.id}`);
             })
             .catch((err) => {
               console.log(err.message);
