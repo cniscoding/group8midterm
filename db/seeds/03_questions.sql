@@ -5,7 +5,7 @@ INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is 7 + 7?', 1, '49', '77', '0', '14', 4);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('Who lives in a pineapple under the sea?', 2, 'The Little Mermaid', 'Spongebob Squarepants', 'Moana', 'Sharkie',2);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('Who is the Lion King?', 2, 'Nala', 'Simba', 'Sebastien', 'Igor', 2);
-INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('Where do the Simpsons live?', 2 'Springfield', 'Los Angeles', 'Pawnee', 'New York', 1);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('Where do the Simpsons live?', 2, 'Springfield', 'Los Angeles', 'Pawnee', 'New York', 1);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What cleaning implement comes to life in Fantasia?', 2, 'Mops', 'Brushes', 'Buckets', 'Brooms', 4);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What movie features Anna and Elsa?', 2, 'Encanto', 'Frozen', 'Moana', 'Tangled', 2);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What school are we attending?', 3, 'Bayside High', 'The School of Hard Knocks', 'Lighthouse Labs', 'Code Academy', 3);
@@ -37,4 +37,4 @@ INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('Which of these countries is the largest?', 8, 'Mexico', 'Canada', 'Spain', 'Chad', 2);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Australia?', 8, 'Canberra', 'Melbourne', 'Sydney', 'Perth', 1);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the smallest country in the world?', 8, 'Lesotho', 'Tonga', 'Vatican City', 'Micronesia', 3);
-INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the largest landlocked country in the world?', 'Ethiopia', 'Paraguay', 'Mali', 'Kazakhstan', 4);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the largest landlocked country in the world?', 8, 'Ethiopia', 'Paraguay', 'Mali', 'Kazakhstan', 4);
