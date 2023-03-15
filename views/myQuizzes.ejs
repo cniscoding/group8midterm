@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MY QUIZZES</title>
+  <title>My Quizzes</title>
 
-    <!-- CSS STYLING IMPORTS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" />
+  <!-- CSS STYLING IMPORTS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/nav.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/nav.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
 
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-    <script src="/vendor/jquery-3.0.0.js"></script>
-    <script defer src="/scripts/app.js"></script>
-<!-- Latest compiled and minified CSS -->
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+  <!-- Latest compiled and minified CSS -->
 
 
 </head>
+
 <body>
   <header>
     <%- include('partials/_header'); %>
   </header>
   <div class="starter-template">
 
-    <h1> MY QUIZZES</h1>
-    <h2><Quizzes</h2>
-    <% for (const quiz of myQuizzes) { %>
-      <table>
-      <tr>
-        <td><a href="/quiz/<%= quiz.id %>"><%= quiz.title %></a></td>
-      </tr>
-      </table>
-     <%} %>
-    <h2>Results</h2>
-    <% for (const result of myResults) { %>
-      <table>
-      <tr>
-        <td><a href="/results/<%= result.id %>"><%= result.title %></a></td>
-      </tr>
-    </table>
-     <%} %>
+    <h1> My Quizzes</h1>
+    <h2>Quizzes</h2>
+
+    <div class="list-group">
+      <% for (const quiz of myQuizzes) { %>
+        <a href="/quiz/<%= quiz.id %>" class="list-group-item ">
+          <%= quiz.title %>
+        </a>
+        <%} %>
+    </div>
+
+
+    <h2>Results of My Quizzes</h2>
+    <div class="list-group">
+      <% for (const result of myResults) { %>
+        <a href="/results/<%= result.id %>" class="list-group-item ">
+          <%= result.title %><br><%= 'Completed at: ' + result.completed_at %>
+        </a>
+
+        <%} %>
+    </div>
+
+
   </div>
 </body>
+
 </html>
-
-
-
