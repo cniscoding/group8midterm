@@ -78,7 +78,7 @@ router.post('/', (req, res) => {
                     .then(question => {
                       addQuestion({ quiz_id: question[0].quiz_id, question: req.body.q5, answer_1: req.body.q5a1, answer_2: req.body.q5a2, answer_3: req.body.q5a3, answer_4: req.body.q5a4, is_correct: req.body.q5radio })
                         .then(question => {
-                          res.redirect('/');
+                          res.redirect('/my-Quizzes');
                         });
                     });
                 });
