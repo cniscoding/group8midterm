@@ -7,20 +7,27 @@
 
 const express = require('express');
 const router = express.Router();
+const { Pool } = require('pg');
+const { getResultById } = require('../db/queries/result');
 
-router.get('/:id', (req, res) => {
-  //  const id = req.params.id;
-
-  // if results database contains a result with the given id, procceed
-  // const result = getResultById(id, resultsDatabase);
-  // if the result id is not found, return alert message
-
-  // res.render('results', result);
+const pool = new Pool({
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 });
 
-function getResultById(id, resultsDatabase) {
-  // find the result in the resultsDatabase that matches the given id
-  // return the result
-}
+router.get('/:id', (req, res) => {
+  const id = req.params.id;
+  getResultById(id)
+    .then((result) => {
+      res.render('results', result);
+    })
+    .catch((err) => {
+      res.send("Result not found!");
+    });
+})
+
 
 module.exports = router;

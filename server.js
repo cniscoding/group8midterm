@@ -64,6 +64,7 @@ app.use('/my-Quizzes', myQuizzes);
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
+
   // get all public quizzes from the quizzes database
   res.render('index');
 });
