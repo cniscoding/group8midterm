@@ -38,3 +38,13 @@ INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Australia?', 8, 'Canberra', 'Melbourne', 'Sydney', 'Perth', 1);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the smallest country in the world?', 8, 'Lesotho', 'Tonga', 'Vatican City', 'Micronesia', 3);
 INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the largest landlocked country in the world?', 8, 'Ethiopia', 'Paraguay', 'Mali', 'Kazakhstan', 4);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Alberta?', 9, 'Calgary', 'Edmonton', 'Lethbridge', 'Red Deer', 2);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of New Brunswick?', 9, 'Fredericton', 'Moncton', 'Halifax', 'Saint John', 1);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of the Yukon?', 9, 'Dawson City', 'Haines Junction', 'Whitehorse', 'Yellowknife', 3);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Quebec?', 9, 'Quebec City', 'Montreal', 'Gatineau', 'Sherbrooke', 1);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Nunavut?', 9, 'Yellowknife', 'Alert', 'Kugluktuk', 'Iqaluit', 4);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of California?', 10, 'Los Angeles', 'Sacramento', 'San Francisco', 'San Jose', 2);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Georgia?', 10, 'Savannah', 'Marietta', 'Macon', 'Atlanta', 4);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Florida?', 10, 'Miami', 'Jacksonville', 'Orlando', 'Tallahassee', 4);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of New York?', 10, 'Syracuse', 'Albany', 'New York City', 'Buffalo', 2);
+INSERT INTO questions (question, quiz_id, answer_1, answer_2, answer_3, answer_4, is_correct) VALUES ('What is the capital of Massachusetts?', 10, 'Boston', 'Springfield', 'Cambridge', 'Plymouth', 1);
