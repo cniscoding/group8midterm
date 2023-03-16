@@ -40,9 +40,9 @@
     <div class="list-group">
       <% for (const quiz of myQuizzes) { %>
         <a href="/quiz/<%= quiz.id %>" class="list-group-item ">
-          <h5>
-            <%= quiz.title + '    (' + quiz.public + ')' %>
-          </h5>
+          <p>
+            <%= quiz.title %> <em><h5><%=quiz.public%></h5></em>
+          </p>
         </a>
         <%} %>
     </div>
@@ -53,9 +53,9 @@
     <div class="list-group">
       <% for (const result of myResults) { %>
         <a href="/results/<%= result.id %>" class="list-group-item ">
-          <h5 >
-            <%= result.title %><br>
-              <%= 'Completed at: ' + result.completed_at %>
+          <p>
+            <%= result.title %></p>
+              <h5><%= 'Completed at: ' + result.completed_at %>
           </h5>
         </a>
         <%} %>
