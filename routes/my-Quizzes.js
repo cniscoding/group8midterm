@@ -10,6 +10,11 @@ const router = express.Router();
 const { getMyQuizzes, getMyResult } = require('../db/queries/myQuizzes');
 
 router.get('/', (req, res) => {
+  const userid = req.cookies.user_id;
+  if (!userid) {
+    res.redirect('/login')
+    return;
+  }
   const user_id = 1;
   getMyQuizzes(user_id)
     .then((myQuizzes) => {

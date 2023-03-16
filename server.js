@@ -5,7 +5,7 @@ require('dotenv').config();
 const sassMiddleware = require('./lib/sass-middleware');
 const express = require('express');
 const morgan = require('morgan');
-//const cookieSession = require("cookie-session");
+const cookieParser = require('cookie-parser')
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -25,6 +25,7 @@ app.use(
     isSass: false, // false => scss, true => sass
   })
 );
+app.use(cookieParser());
 app.use(express.static('public'));
 
 // Separated Routes for each Resource
@@ -36,6 +37,7 @@ const quiz = require('./routes/quiz');
 const createPage = require('./routes/create-Page');
 const results = require('./routes/results');
 const myQuizzes = require('./routes/my-Quizzes');
+const login = require('./routes/login')
 
 
 
@@ -49,6 +51,7 @@ app.use('/quiz', quiz);
 app.use('/create-Page', createPage);
 app.use('/results', results);
 app.use('/my-Quizzes', myQuizzes);
+app.use('/login', login);
 
 // Note: mount other resources here, using the same pattern above
 const { getPublicQuizzes } = require('./db/queries/publicQuizzes');
