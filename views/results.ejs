@@ -11,7 +11,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/nav.css" />
     <link rel="stylesheet" href="/styles/main.css" />
     <link rel="stylesheet" href="/styles/layout.css" />
@@ -23,7 +23,19 @@
 
     <script src="/vendor/jquery-3.0.0.js"></script>
     <script defer src="/scripts/app.js"></script>
-  <title>RESULTS PAGE</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      $('.btn-success').on('click', ()=> {
+    console.log('help im clicked')
+    $('.result_completed_gif').slideToggle("slow")
+  });
+    });
+    </script>
+
+  <title>RESULTS</title>
 </head>
 <body>
   <header>
@@ -33,19 +45,16 @@
     <div class="testingbox">
       <%- include('partials/_login'); %>
     </div>
-    <h1> RESULTS PAGE</h1>
-    <%= score %>
-    <h1> Quiz Result </h1>
 
     <div class="card text-center">
       <div class="card-title">
-        <h2> <strong>Quiz: <%= title %></strong> </h2>
+        <h2> <strong>Quiz Result: <%= title %></strong> </h2>
       </div>
       <div class="card-body">
         <h3 class="card-text">You got <strong><%= score %></strong> out of <strong>5</strong>.</h3>
         <% if (score == 5) { %>
           <h4 class="card-text"><em>Excellent!</em></h4>
-          <a href="#" class="btn btn-success">Get your rewards</a>
+          <a href="#" class="btn btn-success">Get your reward</a>
         <% } else { %>
         <a href="/quiz/<%= quiz_id %>" class="btn btn-warning">Try again</a>
         <% } %>
@@ -54,9 +63,13 @@
       </div>
       <br>
       <div class="card-footer text-muted">
-        Completed_at: <%= completed_at %>
+        Completed at: <%= completed_at %>
+      </div>
+      <div class="result_completed_gif">
+        <img src="/images/well-done-good-job.gif">
       </div>
     </div>
+
   </div>
 
 </body>

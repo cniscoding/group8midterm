@@ -6,5 +6,5 @@ INSERT INTO quizzes (user_id, title, public) VALUES (1, 'Real Housewives Quiz', 
 INSERT INTO quizzes (user_id, title, public) VALUES (1, 'Dog Quiz', 'public');
 INSERT INTO quizzes (user_id, title, public) VALUES (1, 'US Politics Quiz', 'public');
 INSERT INTO quizzes (user_id, title, public) VALUES (1, 'Basic Geography Quiz', 'private');
-INSERT INTO quizzes (user_id, title, public) VALUES (1, 'Canadian Capitals Quiz', 'private');
+INSERT INTO quizzes (user_id, title, public) VALUES (1, 'Canadian Capitals Quiz', 'public');
 INSERT INTO quizzes (user_id, title, public) VALUES (1, 'US Capitals Quiz', 'public');

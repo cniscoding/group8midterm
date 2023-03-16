@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/nav.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
@@ -20,9 +20,12 @@
   href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
   integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
   crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/login.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
+  <script src="/scripts/login.js"></script>
+
   <title>QUIZ PAGE</title>
 </head>
 <body>
@@ -30,7 +33,9 @@
     <%- include('partials/_header'); %>
   </header>
   <div class="starter-template">
-
+    <div class="testingbox">
+      <%- include('partials/_login'); %>
+    </div>
     <h1> <%=quiz.title%></h1>
     <br>
     <section>
