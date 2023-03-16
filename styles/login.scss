@@ -1,12 +1,12 @@
 $text-backgroundcolor: white;
 $text-textcolor: black;
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+// }
 
 .login-form {
   display: flex;
@@ -24,7 +24,7 @@ body {
     margin: 12px 0;
   }
 
-  // #btn {
+  // .btn {
   //   margin-bottom:20px;
   //   margin-top: 20px;
   //   color:black
@@ -37,6 +37,9 @@ body {
   }
   .show-register:visited {
     color:white;
+  }
+  .login_bottom-margin{
+    margin-top:20px
   }
 }
 
@@ -77,6 +80,10 @@ body {
   }
   .show-login:visited {
     color:white;
+  }
+
+  .login_bottom-margin{
+    margin-top:20px
   }
 }
 

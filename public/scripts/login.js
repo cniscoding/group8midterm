@@ -17,4 +17,6 @@ $(document).ready(function() {
     $('.login-form').show();
     $('.empty-register').hide();
   });
+
+
 });
