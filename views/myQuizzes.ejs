@@ -35,27 +35,31 @@
   <div class="starter-template">
 
     <h1> My Quizzes</h1>
-    <h2>Quizzes</h2>
 
+    <br>
     <div class="list-group">
       <% for (const quiz of myQuizzes) { %>
         <a href="/quiz/<%= quiz.id %>" class="list-group-item ">
-          <%= quiz.title %>
+          <h5>
+            <%= quiz.title + '    (' + quiz.public + ')' %>
+          </h5>
         </a>
         <%} %>
     </div>
+    <br>
 
-
-    <h2>Results of My Quizzes</h2>
+    <h1>Attempts of My Quizzes</h1>
+    <br>
     <div class="list-group">
       <% for (const result of myResults) { %>
         <a href="/results/<%= result.id %>" class="list-group-item ">
-          <%= result.title %><br><%= 'Completed at: ' + result.completed_at %>
+          <h5 >
+            <%= result.title %><br>
+              <%= 'Completed at: ' + result.completed_at %>
+          </h5>
         </a>
-
         <%} %>
     </div>
-
 
   </div>
 </body>
