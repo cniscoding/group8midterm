@@ -12,7 +12,7 @@ res.render('login');
 });
 
 router.post('/', (req, res) => {
-
+  res.cookie('user_id', '1')
   res.redirect('/');
 });
 

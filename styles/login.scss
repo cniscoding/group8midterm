@@ -1,9 +1,12 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+$text-backgroundcolor: white;
+$text-textcolor: black;
+
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh;
+// }
 
 .login-form {
   display: flex;
@@ -11,7 +14,7 @@ body {
   align-items: center;
   padding: 50px 40px;
   color: white;
-  background: black;
+  background-color: rgb(15, 83, 91);
 
   h1 {
     margin: 0 0 24px 0;
@@ -21,16 +24,29 @@ body {
     margin: 12px 0;
   }
 
-  .btn {
-    margin-bottom:20px;
-    margin-top: 20px;
+  // .btn {
+  //   margin-bottom:20px;
+  //   margin-top: 20px;
+  //   color:black
+  // }
+
+  .form-input-user-pass{
+    background: $text-backgroundcolor;
+    padding: 0.5rem 0.5rem;
+    color: $text-textcolor
+  }
+  .show-register:visited {
+    color:white;
+  }
+  .login_bottom-margin{
+    margin-top:20px
   }
 }
 
 .register-form {
   padding-top: 20px;
-
 }
+
 .empty-register {
   display:none;
 }
@@ -41,7 +57,7 @@ body {
   align-items: center;
   padding: 50px 40px;
   color: white;
-  background: black;
+  background-color: rgb(15, 83, 91);
 
   h1 {
     margin: 0 0 24px 0;
@@ -51,9 +67,25 @@ body {
     margin: 12px 0;
   }
 
-  .btn {
-    margin-bottom:20px;
-    margin-top: 20px;
+  // .btn {
+  //   margin-bottom:20px;
+  //   margin-top: 20px;
+  //   color:black
+  // }
+
+  .form-input-user-pass{
+    background: $text-backgroundcolor;
+    padding: 0 0.5rem;
+    color: $text-textcolor;
+  }
+  .show-login:visited {
+    color:white;
   }
 
+  .login_bottom-margin{
+    margin-top:20px
+  }
 }
+
+
+

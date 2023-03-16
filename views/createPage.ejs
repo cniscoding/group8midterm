@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/form.css" />
+  <link rel="stylesheet" href="/styles/login.css" />
 
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
@@ -25,6 +26,7 @@
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
+  <script src="/scripts/login.js"></script>
 
 </head>
 <body>
@@ -32,6 +34,9 @@
     <%- include('partials/_header'); %>
   </header>
   <div class="starter-template">
+    <div class="testingbox">
+      <%- include('partials/_login'); %>
+    </div>
 
     <h1> Create a Quiz </h1><br>
     <p> Create your own quiz right here! Make sure to select the radio button next to the correct answer for each question. Then hit "Create my quiz!" and your quiz will be ready!</p>
