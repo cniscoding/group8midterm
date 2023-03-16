@@ -10,6 +10,12 @@ const router = express.Router();
 const { getMyQuizzes, getMyResult } = require('../db/queries/myQuizzes');
 
 router.get('/', (req, res) => {
+  console.log(req.session)
+  // const userid = req.session.user_id;
+  // if (!userid) {
+  //   res.error("💩");
+  //   return;
+  // }
   const user_id = 1;
   getMyQuizzes(user_id)
     .then((myQuizzes) => {

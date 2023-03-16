@@ -36,6 +36,7 @@ const quiz = require('./routes/quiz');
 const createPage = require('./routes/create-Page');
 const results = require('./routes/results');
 const myQuizzes = require('./routes/my-Quizzes');
+const login = require('./routes/login')
 
 
 
@@ -49,6 +50,7 @@ app.use('/quiz', quiz);
 app.use('/create-Page', createPage);
 app.use('/results', results);
 app.use('/my-Quizzes', myQuizzes);
+app.use('/login', login);
 
 // Note: mount other resources here, using the same pattern above
 const { getPublicQuizzes } = require('./db/queries/publicQuizzes');
