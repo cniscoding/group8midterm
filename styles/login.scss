@@ -1,3 +1,6 @@
+$text-backgroundcolor: white;
+$text-textcolor: black;
+
 body {
   display: flex;
   justify-content: center;
@@ -21,16 +24,16 @@ body {
     margin: 12px 0;
   }
 
-  .btn {
-    margin-bottom:20px;
-    margin-top: 20px;
-    color:black
-  }
+  // #btn {
+  //   margin-bottom:20px;
+  //   margin-top: 20px;
+  //   color:black
+  // }
 
   .form-input-user-pass{
-    background: black;
+    background: $text-backgroundcolor;
     padding: 0.5rem 0.5rem;
-    color: white
+    color: $text-textcolor
   }
   .show-register:visited {
     color:white;
@@ -61,16 +64,16 @@ body {
     margin: 12px 0;
   }
 
-  .btn {
-    margin-bottom:20px;
-    margin-top: 20px;
-    color:black
-  }
+  // .btn {
+  //   margin-bottom:20px;
+  //   margin-top: 20px;
+  //   color:black
+  // }
 
   .form-input-user-pass{
-    background: black;
+    background: $text-backgroundcolor;
     padding: 0 0.5rem;
-    color: white
+    color: $text-textcolor;
   }
   .show-login:visited {
     color:white;
