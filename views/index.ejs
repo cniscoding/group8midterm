@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
 
@@ -35,7 +35,10 @@
     <%- include('partials/_header'); %>
   </header>
 <div class="starter-template">
-  <h1>INDEX PAGE</h1>
+  <h1>Welcome to Group 8's Quiz App!</h1>
+  <br>
+  <p>Pick a quiz from the list below, or <a href="/create-Page">create your own</a> and share it with your friends!</p>
+  <br>
 
   <div class="list-group">
     <% for (const quiz of publicQuizzes) { %>

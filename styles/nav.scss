@@ -1,3 +1,58 @@
 #button-custom {
-background-color: white;
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+}
+
+#button-individual {
+  align-items: center;
+  margin-top: 34px;
+  margin-right: 10px;
+  width: 100px;
+  font-size: 16px;
+  background-color: rgb(108, 204, 204);
+  font-family: Open Sans;
+}
+
+#header-container {
+  height: 110px;
+  background-color: rgb(15, 83, 91);
+}
+
+
+.navbar-collapse {
+  height: 80px;
+}
+
+.collapse {
+  height: 80px;
+}
+
+#navbar {
+  height: 80px;
+}
+
+.navbar-brand {
+  margin-bottom: 10px;
+}
+
+.nav {
+  height: 80px;
+
+}
+
+.navbar-nav {
+  height: 80px;
+}
+
+.nav__div-links {
+  font-size: 24px;
+  font-family: Open Sans;
+  font-weight: 500;
+  margin-top: 28px;
+}
+
+.list-group-item {
+  font-size: 18px;
+  padding: 20px;
 }

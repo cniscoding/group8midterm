@@ -2,9 +2,15 @@ body {
   padding-top: 50px;
   display :flex;
   justify-content: center;
+  font-family: Open Sans;
 
 }
 .starter-template {
-  padding: 40px 15px;
+  padding: 80px 15px;
   width: 80%;
+  font-family: Open Sans;
+}
+
+p {
+  font-size: 20px;
 }
