@@ -24,9 +24,13 @@
   crossorigin="anonymous">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/nav.css" />
+  <link rel="stylesheet" href="/styles/login.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
+  <script src="/scripts/login.js"></script>
+
+
 
 </head>
 
@@ -35,9 +39,12 @@
     <%- include('partials/_header'); %>
   </header>
 
-<div class="starter-template"><div>
- <p> im a box</p>
-</div>
+
+  <div class="starter-template"><div>
+    <div class="testingbox">
+      <%- include('partials/_login'); %>
+    </div>
+
   <h1>Welcome to Group 8's Quiz App!</h1>
   <br>
   <p>Pick a quiz from the list below, or <a href="/create-Page">create your own</a> and share it with your friends!</p>
