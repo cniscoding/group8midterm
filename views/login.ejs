@@ -6,20 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles/login.css" />
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+  integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/nav.css" />
 
+  <link rel="stylesheet" href="/styles/login.css" />
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
   <script>
   $(document).ready(function(){
     $(".show-register").click(function(){
-      console.log('clicked')
       $('.login-form').hide();
       $('.empty-register').show();
     });
     $(".show-login").click(function(){
-      console.log('clicked')
       $('.login-form').show();
       $('.empty-register').hide();
     });
@@ -30,21 +34,26 @@
   <title>login page</title>
 </head>
 <body>
+
+  <header>
+    <%- include('partials/_header'); %>
+  </header>
+
   <form action="/login" method="POST" class="login-register-div">
   <div class="login-form">
     <h1>Login</h1>
     <div class="form-input-material">
-      <input type="text"  placeholder="Username"  />
+      <input class='form-input-user-pass' type="text"  placeholder="Username"  />
 
     </div>
     <div class="form-input-material">
-      <input type="password" placeholder="Password" />
+      <input class='form-input-user-pass' type="password" placeholder="Password" />
 
     </div>
     <button class="btn" type="submit">Login</button>
 
     <div>
-      <a href='#' class="show-register">Don't have a account?</a>
+      <a href='#' class="show-register">Don't have a account?<br> Click here to Register</a>
     </div>
   </div>
 
@@ -53,15 +62,15 @@
     <div class="register-form">
       <h1>Register</h1>
       <div class="form-input-material">
-        <input type="text" placeholder="Username"   />
+        <input class='form-input-user-pass' type="text" placeholder="Username"   />
       </div>
 
         <div class="form-input-material">
-          <input type="email" placeholder="Email"   />
+          <input class='form-input-user-pass' type="email" placeholder="Email"   />
         </div>
 
       <div class="form-input-material">
-        <input type="password" placeholder="Password"   />
+        <input class='form-input-user-pass'  type="password" placeholder="Password"   />
 
       </div>
       <button class="btn" type="submit">Register</button>

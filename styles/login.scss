@@ -24,13 +24,23 @@ body {
   .btn {
     margin-bottom:20px;
     margin-top: 20px;
+    color:black
+  }
+
+  .form-input-user-pass{
+    background: black;
+    padding: 0.5rem 0.5rem;
+    color: green
+  }
+  .show-register:visited {
+    color:white;
   }
 }
 
 .register-form {
   padding-top: 20px;
-
 }
+
 .empty-register {
   display:none;
 }
@@ -54,6 +64,18 @@ body {
   .btn {
     margin-bottom:20px;
     margin-top: 20px;
+    color:black
   }
 
+  .form-input-user-pass{
+    background: black;
+    padding: 0 0.5rem;
+    color: green
+  }
+  .show-login:visited {
+    color:white;
+  }
 }
+
+
+
