@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/styles/nav.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/form.css" />
   <link rel="stylesheet" href="/styles/login.css" />
 
   <link rel="stylesheet"
@@ -37,167 +38,170 @@
       <%- include('partials/_login'); %>
     </div>
 
-    <h1> Create a Quiz </h1>
-    <p> Create your own quiz right here! It's simple: fill in the question and 4 possible answers. Select the radio button next to the correct answer. Then hit "Create my quiz!" and your quiz will be ready!</p>
+    <h1> Create a Quiz </h1><br>
+    <p> Create your own quiz right here! Make sure to select the radio button next to the correct answer for each question. Then hit "Create my quiz!" and your quiz will be ready!</p>
+    <br>
     <section>
     <form action="/create-Page" method="POST">
       <div class="question">
 
         <div class = "individual-question">
-          <label for="title">Quiz Title:</label>
-          <input type="text" id="quiztitle" name="quiztitle" class><br>
+        <p><label for="title">Quiz Title:</label><input type="text" id="quiztitle" name="quiztitle" class></p>
+
+
+          <br>
               </div>
 
-              <div class = "individual-question">
-                <label for="title">Public: </label>
+              <div class = "individual-question extra-margin">
+              <p><label for="title">Public: </label>
                 <input type="radio" id="public" name="publicprivate" required="required" value="public">
                 <label for="title">Private: </label>
-                <input type="radio" id="private" name="publicprivate" required="required" value="private">
+                <input type="radio" id="private" name="publicprivate" required="required" value="private"></p>
                 <br>
                     </div>
 
-        <div class = "individual-question">
-      <label for="q1">Question 1:</label>
-      <input type="text" id="q1" name="q1" class><br>
+        <div class = "individual-question extra-margin">
+      <p><label for="q1">Question 1:</label>
+      <input type="text" id="q1" name="q1"></p><br>
           </div>
 
           <div class = "individual-question">
-      <label for="q1a1">Answer option 1:</label>
-      <input type="text" id="q1a1" name="q1a1"><input type="radio" id="q1a1" name="q1radio" required="required" value="1"><br>
+      <p><label for="q1a1">Answer option 1:</label>
+      <input type="text" id="q1a1" name="q1a1"><input type="radio" id="q1a1" name="q1radio" required="required" value="1"></p><br>
     </div>
 
       <div class = "individual-question">
-      <label for="q1a2">Answer option 2:</label>
-      <input type="text" id="q1a2" name="q1a2"><input type="radio" id="q1a2" name="q1radio" required="required" value="2"><br>
+        <p> <label for="q1a2">Answer option 2:</label>
+      <input type="text" id="q1a2" name="q1a2"><input type="radio" id="q1a2" name="q1radio" required="required" value="2"></p><br>
     </div>
 
       <div class = "individual-question">
-      <label for="q1a3">Answer option 3:</label>
-      <input type="text" id="q1a3" name="q1a3"><input type="radio" id="q1a3" name="q1radio" required="required" value="3"><br>
+        <p><label for="q1a3">Answer option 3:</label>
+      <input type="text" id="q1a3" name="q1a3"><input type="radio" id="q1a3" name="q1radio" required="required" value="3"></p><br>
     </div>
 
       <div class = "individual-question">
-      <label for="q1a4">Answer option 4:</label>
-      <input type="text" id="q1a4" name="q1a4"><input type="radio" id="q1a4" name="q1radio" required="required" value='4'><br>
+        <p> <label for="q1a4">Answer option 4:</label>
+      <input type="text" id="q1a4" name="q1a4"><input type="radio" id="q1a4" name="q1radio" required="required" value='4'></p><br>
     </div>
 
       <br>
     </div>
 
       <div class="question">
-        <div class = "individual-question">
-      <label for="q2">Question 2:</label>
-      <input type="text" id="q2" name="q2"><br>
+        <div class = "individual-question extra-margin">
+      <p><label for="q2">Question 2:</label>
+      <input type="text" id="q2" name="q2"></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q2a1">Answer option 1:</label>
-      <input type="text" id="q2a1" name="q2a1"><input type="radio" id="q2a1" name="q2radio" required="required" value='1'><br>
+      <p><label for="q2a1">Answer option 1:</label>
+      <input type="text" id="q2a1" name="q2a1"><input type="radio" id="q2a1" name="q2radio" required="required" value='1'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q2a2">Answer option 2:</label>
-      <input type="text" id="q2a2" name="q2a2"><input type="radio" id="q2a2" name="q2radio" required="required" value='2'><br>
+      <p><label for="q2a2">Answer option 2:</label>
+      <input type="text" id="q2a2" name="q2a2"><input type="radio" id="q2a2" name="q2radio" required="required" value='2'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q2a3">Answer option 3:</label>
-      <input type="text" id="q2a3" name="q2a3"><input type="radio" id="q2a3" name="q2radio" required="required" value='3'><br>
+      <p><label for="q2a3">Answer option 3:</label>
+      <input type="text" id="q2a3" name="q2a3"><input type="radio" id="q2a3" name="q2radio" required="required" value='3'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q2a4">Answer option 4:</label>
-      <input type="text" id="q2a4" name="q2a4"><input type="radio" id="q2a4" name="q2radio" required="required" value='4'><br>
+      <p><label for="q2a4">Answer option 4:</label>
+      <input type="text" id="q2a4" name="q2a4"><input type="radio" id="q2a4" name="q2radio" required="required" value='4'></p><br>
       </div>
       <br>
     </div>
 
       <div class="question">
-        <div class = "individual-question">
-      <label for="q3">Question 3:</label>
-      <input type="text" id="q3" name="q3"><br>
+        <div class = "individual-question extra-margin">
+      <p><label for="q3">Question 3:</label>
+      <input type="text" id="q3" name="q3"></p><br>
         </div>
 
       <div class = "individual-question">
-      <label for="q3a1">Answer option 1:</label>
-      <input type="text" id="q3a1" name="q3a1"><input type="radio" id="q3a1" name="q3radio" required="required" value='1'><br>
+      <p><label for="q3a1">Answer option 1:</label>
+      <input type="text" id="q3a1" name="q3a1"><input type="radio" id="q3a1" name="q3radio" required="required" value='1'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q3a2">Answer option 2:</label>
-      <input type="text" id="q3a2" name="q3a2"><input type="radio" id="q3a2" name="q3radio" required="required" value='2'><br>
+      <p><label for="q3a2">Answer option 2:</label>
+      <input type="text" id="q3a2" name="q3a2"><input type="radio" id="q3a2" name="q3radio" required="required" value='2'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q3a3">Answer option 3:</label>
-      <input type="text" id="q3a3" name="q3a3"><input type="radio" id="q3a3" name="q3radio" required="required" value='3'><br>
+      <p><label for="q3a3">Answer option 3:</label>
+      <input type="text" id="q3a3" name="q3a3"><input type="radio" id="q3a3" name="q3radio" required="required" value='3'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q3a4">Answer option 4:</label>
-      <input type="text" id="q3a4" name="q3a4"><input type="radio" id="q3a4" name="q3radio" required="required" value='4'><br>
+      <p><label for="q3a4">Answer option 4:</label>
+      <input type="text" id="q3a4" name="q3a4"><input type="radio" id="q3a4" name="q3radio" required="required" value='4'></p><br>
       </div>
       <br>
       </div>
 
       <div class="question">
-        <div class = "individual-question">
-      <label for="q4">Question 4:</label>
-      <input type="text" id="q4" name="q4"><br>
+        <div class = "individual-question extra-margin">
+      <p><label for="q4">Question 4:</label>
+      <input type="text" id="q4" name="q4"></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q4a1">Answer option 1:</label>
-      <input type="text" id="q4a1" name="q4a1"><input type="radio" id="q4a1" name="q4radio" required="required" value='1'><br>
+      <p><label for="q4a1">Answer option 1:</label>
+      <input type="text" id="q4a1" name="q4a1"><input type="radio" id="q4a1" name="q4radio" required="required" value='1'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q4a2">Answer option 2:</label>
-      <input type="text" id="q4a2" name="q4a2"><input type="radio" id="q4a2" name="q4radio" required="required" value='2'><br>
+      <p><label for="q4a2">Answer option 2:</label>
+      <input type="text" id="q4a2" name="q4a2"><input type="radio" id="q4a2" name="q4radio" required="required" value='2'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q4a3">Answer option 3:</label>
-      <input type="text" id="q4a3" name="q4a3"><input type="radio" id="q4a3" name="q4radio" required="required" value='3'><br>
+      <p><label for="q4a3">Answer option 3:</label>
+      <input type="text" id="q4a3" name="q4a3"><input type="radio" id="q4a3" name="q4radio" required="required" value='3'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q4a4">Answer option 4:</label>
-      <input type="text" id="q4a4" name="q4a4"><input type="radio" id="q4a4" name="q4radio" required="required" value='4'><br>
+      <p><label for="q4a4">Answer option 4:</label>
+      <input type="text" id="q4a4" name="q4a4"><input type="radio" id="q4a4" name="q4radio" required="required" value='4'></p><br>
       </div>
       <br>
       </div>
 
       <div class="question">
-        <div class = "individual-question">
-      <label for="q5">Question 5:</label>
-      <input type="text" id="q5" name="q5"><br>
+        <div class = "individual-question extra-margin">
+      <p><label for="q5">Question 5:</label>
+      <input type="text" id="q5" name="q5"></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q5a1">Answer option 1:</label>
-      <input type="text" id="q5a1" name="q5a1"><input type="radio" id="q5a1" name="q5radio" required="required" value='1'><br>
+      <p><label for="q5a1">Answer option 1:</label>
+      <input type="text" id="q5a1" name="q5a1"><input type="radio" id="q5a1" name="q5radio" required="required" value='1'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q5a2">Answer option 2:</label>
-      <input type="text" id="q5a2" name="q5a2"><input type="radio" id="q5a2" name="q5radio" required="required" value='2'><br>
+      <p><label for="q5a2">Answer option 2:</label>
+      <input type="text" id="q5a2" name="q5a2"><input type="radio" id="q5a2" name="q5radio" required="required" value='2'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q5a3">Answer option 3:</label>
-      <input type="text" id="q5a3" name="q5a3"><input type="radio" id="q5a3" name="q5radio" required="required" value='3'><br>
+      <p><label for="q5a3">Answer option 3:</label>
+      <input type="text" id="q5a3" name="q5a3"><input type="radio" id="q5a3" name="q5radio" required="required" value='3'></p><br>
       </div>
 
       <div class = "individual-question">
-      <label for="q5a4">Answer option 4:</label>
-      <input type="text" id="q5a4" name="q5a4"><input type="radio" id="q5a4" name="q5radio" required="required" value='4'><br>
+      <p><label for="q5a4">Answer option 4:</label>
+      <input type="text" id="q5a4" name="q5a4"><input type="radio" id="q5a4" name="q5radio" required="required" value='4'></p><br>
       </div>
       <br>
       </div>
 
 
-      <button type="submit">Create my quiz!</button>
+      <button type="submit" class="btn btn-info" id="button-create">Create my quiz!</button>
     </form>
   </div>
 </section>

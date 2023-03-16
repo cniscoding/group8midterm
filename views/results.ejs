@@ -35,6 +35,29 @@
     </div>
     <h1> RESULTS PAGE</h1>
     <%= score %>
+    <h1> Quiz Result </h1>
+
+    <div class="card text-center">
+      <div class="card-title">
+        <h2> <strong>Quiz: <%= title %></strong> </h2>
+      </div>
+      <div class="card-body">
+        <h3 class="card-text">You got <strong><%= score %></strong> out of <strong>5</strong>.</h3>
+        <% if (score == 5) { %>
+          <h4 class="card-text"><em>Excellent!</em></h4>
+          <a href="#" class="btn btn-success">Get your rewards</a>
+        <% } else { %>
+        <a href="/quiz/<%= quiz_id %>" class="btn btn-warning">Try again</a>
+        <% } %>
+        &nbsp;
+        <a href="/ %>" class="btn btn-info">More quizzes</a>
+      </div>
+      <br>
+      <div class="card-footer text-muted">
+        Completed_at: <%= completed_at %>
+      </div>
+    </div>
   </div>
+
 </body>
 </html>
